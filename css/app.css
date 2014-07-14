@@ -8192,6 +8192,40 @@ figure a:hover span {
   border-color: transparent transparent #b1b1a6 transparent;
 }
 
+/* line 9, ../sass/theme/_panels.scss */
+#epub .square-panel {
+  overflow: auto;
+  background-color: #e2edf2;
+  border: 2px solid #3ba1cd;
+  padding: 1em;
+  margin: 1.5em 0;
+}
+/* line 16, ../sass/theme/_panels.scss */
+#epub .square-panel h3 {
+  color: #3ba1cd !important;
+}
+/* line 20, ../sass/theme/_panels.scss */
+#epub .square-panel .download a {
+  color: #2b84aa;
+}
+/* line 126, ../sass/core/_mixins.scss */
+#epub .square-panel .download a:hover:hover {
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  -o-transition: all 0.4s ease-in-out 0s;
+  -ms-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+  color: #666666;
+}
+/* line 26, ../sass/theme/_panels.scss */
+#epub .square-panel .content {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 83.33333%;
+  margin-left: 16.66667%;
+}
+
 /* line 11, ../sass/theme/_eoc.scss */
 #epub .eoc.section1 {
   background-color: #d9e5ea;

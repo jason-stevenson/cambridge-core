@@ -1,188 +1,313 @@
 
 
-$panel-padding: 1.5em;
-
+// Panels
+// ================================================================================================
 
 #epub{
-	
-	.interactive-panel{
-		clear: both;
-		@include panel(desaturate(lighten($interactive-panel,45),20), $panel-padding, false);
-		border:3px solid $interactive-panel;
-		h3{
-			color: $interactive-panel !important;
-			span{
-				text-transform: uppercase;
-				font-weight: 200;
-			}
-		}
-	}
-	.interactive-panel.alternate{
-		clear: both;
-		//@include panel(desaturate(lighten($interactive-panel,45),20), $panel-padding, false);
-		border:none;
-		background-color: #fff;
-		padding:0;
-	}
 
 
-
-	.task-panel{
-		clear: both;
-		@include panel($task-panel, $panel-padding, false);
-		border:none;
+	.square-panel{
+		overflow: auto;
+		background-color:desaturate(lighten($base-colour, 40),20);
+		border:2px solid $base-colour;
+		padding:1em;
+		margin: 1.5em 0;
 
 		h3{
-			color: $red !important;
-			span{
-				text-transform: uppercase;
-				font-weight: 300;
+			color: $base-colour !important; 
+		}
+		.download{	
+			a{color:darken($base-colour,10);
+				&:hover{
+					@include hover-colour($grey);
+				}
 			}
-		}
-		ul,ol,p{
-			color:darken($task-panel, 50);
-		}
-
-		.info > p{
-			color: #000 !important;
-			margin:0;
-			padding-top: 1.4em;
 		}
 		.content{
-			clear: both;
-		}
-		.download{
-			@include grid-column(12);
-			@media #{$small} {	
-				@include grid-column(2);
-			}
-			a{
-				color: $heading-blue;
-				@include hover-colour($red)
-			}
-		}
-
-	}
-
-
-
-
-
-
-	.extra-panel{
-		clear: both;
-		@include panel($extra-panel, $panel-padding, false);
-		border:none;
-		h3{
-			color: $purple !important;
-		}
-		ul,ol{
-			color:darken($extra-panel, 60);
+			@include grid-column(10, false, false, 2, false, false, false, false);
 		}
 	}
 
+	// .investigate-panel{
+	// 	clear: both;
+	// 	@include grid-row;
+	// 	@include rounded-all-corners(0.8em);
+	// 	background-color: $investigate-color;
+	// 	border: 3px dotted darken($investigate-color,25);
+	// 	padding: 0.8em;
+	// 	margin-bottom:2em;
 
+	// 	// Icon re-sizing
+	// 	@include svg-bg("../images/ui/investigate-icon", no-repeat, 98% 10%);
+	// 	background-size: 50px auto;
+	// 	@media #{$small} {
+	// 		@include svg-bg("../images/ui/investigate-icon", no-repeat, 98% 10%);
+	// 		background-size: 65px auto;
+	// 	}
 
+	// 	h3{
+	// 		color: #000 !important;
+	// 	}
 
-
-	.activity-panel{
-		clear: both;
-		@include panel($activity-panel, $panel-padding, false);
-		border:none;
-
-		h3{
-			color: darken($heading-blue,20) !important;
-			span{
-				text-transform: uppercase;
-				font-weight: 300;
-			}
-		}
-
-		.download{
-			@include grid-column(12);
-			@media #{$small} {	
-				@include grid-column(2);
-			}
-			a{
-				color: $heading-blue;
-				@include hover-colour($red)
-			}
-		}
-		.info{
-			margin-top: 2em;
-			p{
-				margin-bottom: 0.5em;
-			}
-		}
-
-		table{
-			border:none;
-			clear: both;
-			img{
-				max-width: 80%;
-				@media #{$small} {
-					max-width: 50%;
-				}
-			}
-			th{
-				font-size: 95%;
-				background-color: $activity-table-head;
-				border-right:2px solid #fff;
-				border-bottom:2px solid #fff;
-			}
-			td{
-				background-color: $activity-table-cell;
-				border-right:2px solid #fff;
-				border-bottom:2px solid #fff;
-			}
-
-			tr > th:last-child,
-			tr > td:last-child,{
-				border-right:none;
-				border-bottom:2px solid #fff;
-			}
-			tr:last-child td{
-				border-bottom:none;
-			}
-
-			/* Row striping */
-			tr:nth-of-type(even){
-				td{
-					background-color: lighten($activity-table-cell,5); 
-				}
-			}
-			tr > td:first-child{
-				text-align: center;
-			}
-		}
+	// 	.download{	
+	// 		a{color:darken($investigate-color,30);
+	// 			&:hover{
+	// 				@include download-colour($grey);
+	// 			}
+	// 		}
+	// 	}
+	// 	.content{
+	// 		@include grid-column(9, false, false, 2, false, false, false, false);
+	// 	}
 		
+	// }
 
-		/* Alternate table style */
-		table.alternate{
-			td{
-				background-color: lighten($activity-table-cell,5); 
-			}
-			td:first-child{
-				background-color: #fff; 
-			}
-			/* Row striping */
-			tr{
-				td:first-child{
-					border-bottom:2px solid lighten($activity-table-cell,5);
-					&:last-child{
-						//border:none;
-					}
-				}
-			}
-			tr > td:first-child{
-				text-align: center;
-			}
-			tr:last-child{
-				td{
-					border-bottom: none;
-				}
-			}
-		}
-	}
 
+	// .activity-panel-base{
+	// 		clear: both;
+	// 		margin-top: 1.2em;
+	// 		margin-bottom: 2em;
+	// 	.top{
+	// 		background-color:$activity-color;
+	// 		height:10px;
+	// 		margin: 0 15px;
+	// 		@include rounded-corners(20px, 20px, 0, 0);
+	// 	}
+	// 	.bottom{
+	// 		background-color:$activity-color;
+	// 		height:10px;
+	// 		margin: 0 15px;
+	// 		@include rounded-corners(0, 0, 20px, 20px);
+	// 	}
+	// 	.inner{
+	// 		padding:15px 20px;
+	// 		border:1px solid $activity-color;
+	// 		overflow: auto;
+	// 	}
+	// 	h3{
+	// 		padding:0;
+	// 		margin:0;
+	// 		margin-bottom: 0.8em;
+	// 		font-size:$h4-font-size;
+	// 		color: $activity-color !important;
+	// 	}
+	// 	ol li{
+	// 		color: $activity-color;
+	// 	}
+	// }
+
+
+	// .activity-panel{
+	// 	@extend .activity-panel-base;
+
+	// 	.download{	
+	// 		a{color:darken($activity-color,0);
+	// 			&:hover{
+	// 				@include download-colour($grey);
+	// 			}
+	// 		}
+	// 	}
+	// 	.content{
+	// 		@include grid-column(10, false, false, 2, false, false, false, false);
+	// 	}
+
+	// 	.quote{
+	// 		border:1px solid #000;
+	// 		background-color: #eee;
+	// 		padding:1.3em;
+	// 		overflow: auto;
+	// 		h4{
+	// 			color: #000;
+	// 			font-size: 1.1em;
+	// 			font-weight: bold;
+	// 		}
+	// 		h5{
+	// 			@extend h4;
+	// 			font-size: 0.9em;
+	// 		}
+	// 		cite{
+	// 			float: right;
+	// 			line-height: 1.3em;
+	// 			text-align: right;
+	// 			font-size: 0.9em;
+	// 		}
+	// 	}
+
+	// 	table{
+	// 		border:2px solid $activity-color !important;
+	// 		th{
+	// 			background-color:$activity-color !important;
+	// 			border-right:2px solid #fff;
+	// 			border-bottom:2px solid $activity-color !important;
+	// 		}
+
+	// 		td{
+	// 			border-right:2px solid $activity-color !important;
+	// 			border-bottom:2px solid $activity-color !important;
+	// 		}
+	// 	}
+	// }
+
+
+
+	// .interactive-panel{
+	// 	@extend .activity-panel-base;
+
+	// 	.content{
+	// 		width: 100%;
+	// 		h3{
+	// 			text-transform: uppercase;
+	// 			margin-bottom: 0.8em;
+	// 		}
+	// 		figure{
+	// 			width: 100%;
+	// 			img{width:100%;}
+	// 		}
+	// 	}
+	// }
+
+	// .solution-panel{
+	// 	h3{
+	// 		background-color:$solution-color;
+	// 		color: #fff !important;
+	// 		text-transform: uppercase;
+	// 		padding: 0.3em;
+	// 		text-align:center;
+	// 		margin:0;
+	// 	}
+	// 	.download{	
+	// 		a{color:darken($solution-color,0);
+	// 			&:hover{
+	// 				@include download-colour($grey);
+	// 			}
+	// 		}
+	// 	}
+	// 	.content{
+	// 		@include grid-column(10, false, false, 2, false, false, false, false);
+	// 	}
+	// }
+
+
+
+	// .trivia-panel{
+	// 		width: 100%;
+	// 		margin:0 auto;
+	// 		clear: both;
+	// 		margin-bottom: 25px;
+	// 		height: 140px;
+	// 		@include bg("../images/ui/trivia-icon", no-repeat, 20px 20px);
+	// 		background-size: 70px auto;
+	// 		@media #{$small} {
+	// 			width: 70%;
+	// 			@include bg("../images/ui/trivia-icon", no-repeat, 20px 20px);
+	// 			background-size: 100px auto;
+	// 		}
+	// 		p{	
+	// 			margin-left: 140px;
+	// 			padding-top: 25px;
+	// 			color: $trivia-color;
+	// 				font-size: 1.2em;
+	// 		}
+	// }
+
+	// .chapter1 .trivia-panel{
+	// 	@extend .trivia-panel;
+	// 	@include bg("../images/ui/trivia-icon-2", no-repeat, 20px 20px);
+	// 	@media #{$small} {
+	// 			@include bg("../images/ui/trivia-icon-2", no-repeat, 20px 20px);
+	// 		}
+	// }
+	// .chapter1 .tasty-trivia-panel{
+	// 	@extend .trivia-panel;
+	// 	@include bg("../images/ui/trivia-icon", no-repeat, 20px 20px);
+	// 	@media #{$small} {
+	// 			@include bg("../images/ui/trivia-icon", no-repeat, 20px 20px);
+	// 		}
+	// }
+
+
+
+
+
+
+
+
+	// .collaborate-panel{
+	// 		clear: both;
+	// 		padding:15px 20px;
+	// 		margin:35px 0;
+	// 		border:1px solid $collaborate-color;
+	// 		overflow: auto;
+	// 		@include rounded-all-corners(1em);
+
+	// 		// Icon re-sizing
+	// 		@include svg-bg("../images/ui/collaborate-icon", no-repeat, 95% 35%);
+	// 			background-size: auto 180px;
+	// 		@media #{$small} {
+	// 			background-size: auto 120px;
+	// 		}
+
+	// 		h3{
+	// 			padding:0;
+	// 			margin:0;
+	// 			font-size:$h4-font-size;
+	// 			text-transform: uppercase;
+	// 			color: $collaborate-color !important;
+	// 		}
+	// 		.download{	
+	// 			a{color:darken($collaborate-color,10);
+	// 				&:hover{
+	// 					@include download-colour($grey);
+	// 				}
+	// 			}
+	// 		}
+	// 		.content{
+	// 			@include grid-column(9, false, false, 2, false, false, false, false);
+	// 		}
+
+	// }
+
+
+
+		
+	// /* Reflect on learning */
+	// .reflect-panel{
+	// 	h3{
+	// 		text-transform: uppercase;
+	// 	}
+	// 	ol{
+	// 		li{
+	// 			margin:5px;
+	// 		}
+	// 	}
+	// 	.download{	
+	// 		a:hover{@include download-colour($grey)}
+	// 	}
+	// 	.content{
+	// 		@include grid-column(9, false, false, 2, false, false, false, false);
+	// 	}
+	// }
 }
+
+// $colors-list: $book1-chapter1, $book1-chapter2, $book1-chapter3, $book1-chapter4, $book1-chapter5, $book1-chapter6, $book1-chapter7, $book1-chapter8, $book1-chapter9, $book1-chapter10, $book1-chapter11, $book1-chapter12;
+// @for $i from 1 through length($colors-list) {
+// 	#book1.chapter#{$i} {
+// 		.reflect-panel{
+// 			h3{color: nth($colors-list, $i) !important}
+// 			li{color: nth($colors-list, $i)}
+// 			.download a{color: nth($colors-list, $i)}
+// 		}
+//     }
+// }
+// $colors-list: $book2-chapter1, $book2-chapter2, $book2-chapter3, $book2-chapter4, $book2-chapter5, $book2-chapter6, $book2-chapter7, $book2-chapter8;
+// @for $i from 1 through length($colors-list) {
+// 	#book2.chapter#{$i} {
+// 		.reflect-panel{
+// 			h3{color: nth($colors-list, $i) !important}
+// 			li{color: nth($colors-list, $i)}
+// 			.download a{color: nth($colors-list, $i)}
+// 		}
+// 	}
+// }
+
+

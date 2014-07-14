@@ -7,8 +7,10 @@ $( document ).ready(function() {
 
 	// Download button
 	$('.eoc .download a').html('<div class="icon-doc-solid"></div><div>Download</div>');
-	// $('.activity-panel .download a').html('<div class="icon-doc-solid"></div><div>Download</div>');
-	// $('.task-panel .download a').html('<div class="icon-doc-solid"></div><div>Download</div>');
+
+
+	// Panels
+	$('.square-panel .download a').html('<div class="icon-doc-solid"></div><div>Download</div>');
 
 
 	// Lighbox / Modal

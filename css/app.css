@@ -7590,76 +7590,85 @@ a.th {
 }
 /* line 101, ../sass/core/_base.scss */
 #epub .download {
-  text-align: center;
-  margin: 1em 0;
-  z-index: 500;
+  font-size: 4em;
+  float: left;
+  padding: 0.1em;
 }
-/* line 105, ../sass/core/_base.scss */
-#epub .download div {
-  font-size: 4.5em;
-  margin-bottom: 0.1em;
+@media only screen and (min-width: 768px) {
+  /* line 101, ../sass/core/_base.scss */
+  #epub .download {
+    padding: 0.3em;
+    font-size: 5.2em;
+  }
 }
 /* line 109, ../sass/core/_base.scss */
-#epub .download div + div {
+#epub .download a div + div {
   font-size: 14px;
+  margin-top: 0.5em;
 }
-/* line 118, ../sass/core/_base.scss */
+@media only screen and (min-width: 768px) {
+  /* line 109, ../sass/core/_base.scss */
+  #epub .download a div + div {
+    font-size: 18px;
+  }
+}
+/* line 124, ../sass/core/_base.scss */
 #epub ul, #epub ol {
   list-style-position: outside;
   margin-left: 20px;
 }
-/* line 122, ../sass/core/_base.scss */
+/* line 128, ../sass/core/_base.scss */
 #epub ul li, #epub ol li {
   margin-bottom: 0.4em;
 }
-/* line 125, ../sass/core/_base.scss */
+/* line 131, ../sass/core/_base.scss */
 #epub ul ul, #epub ul ol, #epub ol ul, #epub ol ol {
   margin-bottom: 0;
 }
-/* line 132, ../sass/core/_base.scss */
+/* line 138, ../sass/core/_base.scss */
 #epub ul ul li {
   list-style-type: none;
 }
-/* line 133, ../sass/core/_base.scss */
+/* line 139, ../sass/core/_base.scss */
 #epub ul ul li:before {
   content: "– ";
   margin-left: -20px;
 }
-/* line 144, ../sass/core/_base.scss */
+/* line 150, ../sass/core/_base.scss */
 #epub ol ul li {
   list-style-type: disc;
 }
-/* line 151, ../sass/core/_base.scss */
+/* line 157, ../sass/core/_base.scss */
 #epub ol.roman {
   list-style-position: outside;
 }
-/* line 153, ../sass/core/_base.scss */
+/* line 159, ../sass/core/_base.scss */
 #epub ol.roman li {
   list-style-type: lower-roman;
   padding: 0px 0px;
   margin: 5px 0px;
 }
-/* line 159, ../sass/core/_base.scss */
+/* line 165, ../sass/core/_base.scss */
 #epub ol.alpha-lower {
   list-style-position: outside;
 }
-/* line 161, ../sass/core/_base.scss */
+/* line 167, ../sass/core/_base.scss */
 #epub ol.alpha-lower li {
   list-style-type: lower-alpha;
   padding: 0px 0px;
   margin: 5px 0px;
 }
-/* line 167, ../sass/core/_base.scss */
+/* line 173, ../sass/core/_base.scss */
 #epub ol.alpha-upper {
   list-style-position: outside;
 }
-/* line 169, ../sass/core/_base.scss */
+/* line 175, ../sass/core/_base.scss */
 #epub ol.alpha-upper li {
   list-style-type: upper-alpha;
   padding: 0px 0px;
   margin: 5px 0px;
 }
-/* line 177, ../sass/core/_base.scss */
+/* line 183, ../sass/core/_base.scss */
 #epub ol.numbered-circles {
   counter-reset: li;
   /* Initiate a counter */
@@ -7668,19 +7677,19 @@ a.th {
   padding-left: 0;
   /* Remove the default left padding */
 }
-/* line 181, ../sass/core/_base.scss */
+/* line 187, ../sass/core/_base.scss */
 #epub ol.numbered-circles ol {
   border: none;
 }
-/* line 183, ../sass/core/_base.scss */
+/* line 189, ../sass/core/_base.scss */
 #epub ol.numbered-circles ol li {
   list-style-type: lower-alpha;
 }
-/* line 186, ../sass/core/_base.scss */
+/* line 192, ../sass/core/_base.scss */
 #epub ol.numbered-circles ol li:before {
   content: "";
 }
-/* line 191, ../sass/core/_base.scss */
+/* line 197, ../sass/core/_base.scss */
 #epub ol.numbered-circles li {
   position: relative;
   /* Create a positioning context */
@@ -7691,7 +7700,7 @@ a.th {
   list-style: none;
   /* Disable the normal item numbering */
 }
-/* line 198, ../sass/core/_base.scss */
+/* line 204, ../sass/core/_base.scss */
 #epub ol.numbered-circles > li:before {
   content: counter(li);
   /* Use the counter as content */
@@ -7716,21 +7725,21 @@ a.th {
   -webkit-border-radius: 40px;
   text-align: center;
 }
-/* line 222, ../sass/core/_base.scss */
+/* line 228, ../sass/core/_base.scss */
 #epub dl {
   margin: 2em 0;
 }
-/* line 225, ../sass/core/_base.scss */
+/* line 231, ../sass/core/_base.scss */
 #epub dt {
   float: left;
   display: block;
 }
-/* line 229, ../sass/core/_base.scss */
+/* line 235, ../sass/core/_base.scss */
 #epub dd {
   clear: both;
 }
 @media only screen and (min-width: 768px) {
-  /* line 233, ../sass/core/_base.scss */
+  /* line 239, ../sass/core/_base.scss */
   #epub dt {
     float: left;
     clear: left;
@@ -7738,35 +7747,35 @@ a.th {
     text-align: left;
     font-weight: bold;
   }
-  /* line 240, ../sass/core/_base.scss */
+  /* line 246, ../sass/core/_base.scss */
   #epub dd {
     margin: 0 0 0 0.5em;
     padding: 0 0 0.5em 0;
     clear: none;
   }
-  /* line 245, ../sass/core/_base.scss */
+  /* line 251, ../sass/core/_base.scss */
   #epub dl.wide dt {
     width: 180px;
   }
-  /* line 246, ../sass/core/_base.scss */
+  /* line 252, ../sass/core/_base.scss */
   #epub dl.wider dt {
     width: 240px;
   }
 }
-/* line 254, ../sass/core/_base.scss */
+/* line 260, ../sass/core/_base.scss */
 #epub iframe {
   width: 100%;
   min-height: 400px;
   margin-bottom: 1em;
 }
-/* line 267, ../sass/core/_base.scss */
+/* line 273, ../sass/core/_base.scss */
 #epub .image-tile-2 figure,
 #epub .image-tile-3 figure,
 #epub .image-tile-4 figure {
   width: 100%;
   margin: 0;
 }
-/* line 273, ../sass/core/_base.scss */
+/* line 279, ../sass/core/_base.scss */
 #epub .image-tile-2 {
   display: block;
   padding: 0;
@@ -7798,7 +7807,7 @@ a.th {
 #epub .image-tile-2 > li:nth-of-type(1n+1) {
   clear: both;
 }
-/* line 274, ../sass/core/_base.scss */
+/* line 280, ../sass/core/_base.scss */
 #epub .image-tile-3 {
   display: block;
   padding: 0;
@@ -7830,7 +7839,7 @@ a.th {
 #epub .image-tile-3 > li:nth-of-type(1n+1) {
   clear: both;
 }
-/* line 275, ../sass/core/_base.scss */
+/* line 281, ../sass/core/_base.scss */
 #epub .image-tile-4 {
   display: block;
   padding: 0;
@@ -7863,7 +7872,7 @@ a.th {
   clear: both;
 }
 @media only screen and (min-width: 768px) {
-  /* line 278, ../sass/core/_base.scss */
+  /* line 284, ../sass/core/_base.scss */
   #epub .image-tile-2 {
     display: block;
     padding: 0;
@@ -7895,7 +7904,7 @@ a.th {
   #epub .image-tile-2 > li:nth-of-type(2n+1) {
     clear: both;
   }
-  /* line 279, ../sass/core/_base.scss */
+  /* line 285, ../sass/core/_base.scss */
   #epub .image-tile-3 {
     display: block;
     padding: 0;
@@ -7927,7 +7936,7 @@ a.th {
   #epub .image-tile-3 > li:nth-of-type(3n+1) {
     clear: both;
   }
-  /* line 280, ../sass/core/_base.scss */
+  /* line 286, ../sass/core/_base.scss */
   #epub .image-tile-4 {
     display: block;
     padding: 0;
@@ -7960,78 +7969,78 @@ a.th {
     clear: both;
   }
 }
-/* line 286, ../sass/core/_base.scss */
+/* line 292, ../sass/core/_base.scss */
 #epub .inline {
   width: 50% !important;
   display: block;
 }
-/* line 290, ../sass/core/_base.scss */
+/* line 296, ../sass/core/_base.scss */
 #epub .float-left {
   width: 100%;
 }
 @media only screen and (min-width: 768px) {
-  /* line 290, ../sass/core/_base.scss */
+  /* line 296, ../sass/core/_base.scss */
   #epub .float-left {
     float: left;
     width: 40%;
     margin-right: 50px;
   }
 }
-/* line 298, ../sass/core/_base.scss */
+/* line 304, ../sass/core/_base.scss */
 #epub .float-right {
   width: 100%;
 }
 @media only screen and (min-width: 768px) {
-  /* line 298, ../sass/core/_base.scss */
+  /* line 304, ../sass/core/_base.scss */
   #epub .float-right {
     float: right;
     width: 40%;
     margin-left: 50px;
   }
 }
-/* line 306, ../sass/core/_base.scss */
+/* line 312, ../sass/core/_base.scss */
 #epub .float-center {
   width: 100%;
 }
 @media only screen and (min-width: 768px) {
-  /* line 306, ../sass/core/_base.scss */
+  /* line 312, ../sass/core/_base.scss */
   #epub .float-center {
     width: 70%;
     margin: 0 auto;
   }
 }
-/* line 314, ../sass/core/_base.scss */
+/* line 320, ../sass/core/_base.scss */
 #epub .float-right.small {
   width: 60%;
   margin: 0 auto;
 }
 @media only screen and (min-width: 768px) {
-  /* line 314, ../sass/core/_base.scss */
+  /* line 320, ../sass/core/_base.scss */
   #epub .float-right.small {
     width: 25%;
     margin-left: 50px;
   }
 }
-/* line 322, ../sass/core/_base.scss */
+/* line 328, ../sass/core/_base.scss */
 #epub .float-left.small {
   width: 60%;
   margin: 0 auto;
 }
 @media only screen and (min-width: 768px) {
-  /* line 322, ../sass/core/_base.scss */
+  /* line 328, ../sass/core/_base.scss */
   #epub .float-left.small {
     width: 25%;
     margin-right: 50px;
   }
 }
-/* line 335, ../sass/core/_base.scss */
+/* line 341, ../sass/core/_base.scss */
 #epub .section-container p a {
   color: #000;
 }
 
 /* Misc
 ================================================================================================ */
-/* line 347, ../sass/core/_base.scss */
+/* line 353, ../sass/core/_base.scss */
 .caption {
   font-size: 90%;
   text-align: right;
@@ -8040,7 +8049,7 @@ a.th {
 /* Reveal lightbox overide
 ================================================================================================
 Provides the Zoom icon */
-/* line 359, ../sass/core/_base.scss */
+/* line 365, ../sass/core/_base.scss */
 figure a[data-reveal-id] span {
   float: right;
   position: relative;
@@ -8051,24 +8060,24 @@ figure a[data-reveal-id] span {
   background-color: #000;
   color: #fff;
 }
-/* line 371, ../sass/core/_base.scss */
+/* line 377, ../sass/core/_base.scss */
 figure a:hover span {
   background-color: #fff;
   color: #000;
 }
 
-/* line 383, ../sass/core/_base.scss */
+/* line 389, ../sass/core/_base.scss */
 .reveal-modal figure, .reveal-modal img {
   width: 100%;
 }
-/* line 384, ../sass/core/_base.scss */
+/* line 390, ../sass/core/_base.scss */
 .reveal-modal figcaption {
   padding: 15px 0 0 0;
   font-weight: normal;
   font-size: 90%;
   line-height: 1.4em;
 }
-/* line 389, ../sass/core/_base.scss */
+/* line 395, ../sass/core/_base.scss */
 .reveal-modal figcaption > strong {
   font-weight: bold;
 }
@@ -8194,19 +8203,32 @@ figure a:hover span {
 
 /* line 9, ../sass/theme/_panels.scss */
 #epub .square-panel {
+  clear: both;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5em;
   overflow: auto;
   background-color: #e2edf2;
   border: 2px solid #3ba1cd;
   padding: 1em;
   margin: 1.5em 0;
 }
-/* line 16, ../sass/theme/_panels.scss */
+/* line 3, ../sass/core/_mixins.scss */
+#epub .square-panel:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 18, ../sass/theme/_panels.scss */
 #epub .square-panel h3 {
   color: #3ba1cd !important;
 }
-/* line 20, ../sass/theme/_panels.scss */
+/* line 22, ../sass/theme/_panels.scss */
 #epub .square-panel .download a {
-  color: #2b84aa;
+  color: #3ba1cd;
 }
 /* line 126, ../sass/core/_mixins.scss */
 #epub .square-panel .download a:hover:hover {
@@ -8217,12 +8239,135 @@ figure a:hover span {
   transition: all 0.4s ease-in-out 0s;
   color: #666666;
 }
-/* line 26, ../sass/theme/_panels.scss */
+/* line 28, ../sass/theme/_panels.scss */
 #epub .square-panel .content {
   position: relative;
   padding-left: 0.9375em;
   padding-right: 0.9375em;
   width: 83.33333%;
+  margin-left: 16.66667%;
+}
+/* line 35, ../sass/theme/_panels.scss */
+#epub .rounded-panel {
+  clear: both;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5em;
+  border-radius: 0.8em;
+  -moz-border-radius: 0.8em;
+  -webkit-border-radius: 0.8em;
+  background-color: #e2edf2;
+  border: 3px dotted #3ba1cd;
+  padding: 0.8em;
+  margin-bottom: 2em;
+  background-image: url("../images/ui/investigate-icon.png");
+  background-image: none, url("../images/ui/investigate-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 98% 10%;
+  background-size: 50px auto;
+}
+/* line 3, ../sass/core/_mixins.scss */
+#epub .rounded-panel:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media only screen and (min-width: 768px) {
+  /* line 35, ../sass/theme/_panels.scss */
+  #epub .rounded-panel {
+    background-image: url("../images/ui/investigate-icon.png");
+    background-image: none, url("../images/ui/investigate-icon.svg");
+    background-repeat: no-repeat;
+    background-position: 98% 10%;
+    background-size: 65px auto;
+  }
+}
+/* line 55, ../sass/theme/_panels.scss */
+#epub .rounded-panel .download a {
+  color: #3ba1cd;
+}
+/* line 126, ../sass/core/_mixins.scss */
+#epub .rounded-panel .download a:hover:hover {
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  -o-transition: all 0.4s ease-in-out 0s;
+  -ms-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+  color: #666666;
+}
+/* line 61, ../sass/theme/_panels.scss */
+#epub .rounded-panel .content {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 75%;
+  margin-left: 16.66667%;
+}
+/* line 68, ../sass/theme/_panels.scss */
+#epub .heading-panel {
+  margin-bottom: 3em;
+}
+/* line 70, ../sass/theme/_panels.scss */
+#epub .heading-panel h3 {
+  background-color: #3ba1cd;
+  color: #fff !important;
+  text-transform: uppercase;
+  padding: 0.3em;
+  text-align: center;
+  margin: 0 0 1em 0;
+}
+/* line 79, ../sass/theme/_panels.scss */
+#epub .heading-panel .download a {
+  color: #3ba1cd;
+}
+/* line 126, ../sass/core/_mixins.scss */
+#epub .heading-panel .download a:hover:hover {
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  -o-transition: all 0.4s ease-in-out 0s;
+  -ms-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+  color: #666666;
+}
+/* line 85, ../sass/theme/_panels.scss */
+#epub .heading-panel .content {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 83.33333%;
+  margin-left: 16.66667%;
+}
+/* line 93, ../sass/theme/_panels.scss */
+#epub .naked-panel {
+  margin-bottom: 3em;
+}
+/* line 95, ../sass/theme/_panels.scss */
+#epub .naked-panel h3 {
+  text-transform: uppercase;
+  margin: 0 0 1em 0;
+}
+/* line 100, ../sass/theme/_panels.scss */
+#epub .naked-panel ol li {
+  margin: 5px;
+}
+/* line 126, ../sass/core/_mixins.scss */
+#epub .naked-panel .download a:hover:hover {
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  -o-transition: all 0.4s ease-in-out 0s;
+  -ms-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+  color: #666666;
+}
+/* line 107, ../sass/theme/_panels.scss */
+#epub .naked-panel .content {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 75%;
   margin-left: 16.66667%;
 }
 
@@ -8261,6 +8406,7 @@ figure a:hover span {
 }
 /* line 42, ../sass/theme/_eoc.scss */
 #epub .eoc .download {
+  background-color: red;
   position: relative;
   padding-left: 0.9375em;
   padding-right: 0.9375em;
@@ -8277,15 +8423,21 @@ figure a:hover span {
     float: left;
   }
 }
-/* line 52, ../sass/theme/_eoc.scss */
+/* line 48, ../sass/theme/_eoc.scss */
+#epub .eoc .download a {
+  background-color: yellow;
+  display: block;
+}
+/* line 54, ../sass/theme/_eoc.scss */
 #epub .eoc .content {
+  background-color: orange;
   position: relative;
   padding-left: 0.9375em;
   padding-right: 0.9375em;
   width: 100%;
 }
 @media only screen and (min-width: 768px) {
-  /* line 52, ../sass/theme/_eoc.scss */
+  /* line 54, ../sass/theme/_eoc.scss */
   #epub .eoc .content {
     position: relative;
     padding-left: 0.9375em;

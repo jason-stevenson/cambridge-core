@@ -11,6 +11,9 @@ $( document ).ready(function() {
 
 	// Panels
 	$('.square-panel .download a').html('<div class="icon-doc-solid"></div><div>Download</div>');
+	$('.rounded-panel .download a').html('<span class="icon-doc-solid"></span><div></div>');
+	$('.naked-panel .download a').html('<span class="icon-doc-solid"></span><div></div>');
+	$('.heading-panel .download a').html('<span class="icon-doc-solid"></span><div></div>');
 
 
 	// Lighbox / Modal

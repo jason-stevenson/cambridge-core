@@ -40,16 +40,19 @@
 			padding-bottom: 0.8em;
 		}
 		.download{
+			background-color:red;
 			@include grid-column(12);
 			@media #{$small} {	
 				@include grid-column(2);
 			}
 			a{
 			
-
+				background-color:yellow;
+				display: block;
 			}
 		}
 		.content{
+			background-color:orange;
 			@include grid-column(12, false, false, false, false, false, false, false);
 			@media #{$small} {	
 				@include grid-column(10, false, false, 2, false, false, false, false);
